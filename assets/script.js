@@ -36,44 +36,37 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
-console.log("hi");
 
+//1️⃣Get element from html by id
 const memberListEl = document.getElementById("member_list")
 
+//2️⃣For loop to cycle in the array
+for (let i = 0; i < teamMembers.length; i++) {
+  const thisMember = teamMembers[i];
+  //function to add mark up
+  const markup = addMarkUp(thisMember)
+  memberListEl.innerHTML += markup
+}
 
+//Functions
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//functions
+/**3️⃣
+ * function used to add html element in page
+ * @param {*member of the team} member 
+ * @returns markup
+ */
 function addMarkUp(member) {
   const { name, role, email, img } = member
   const markup = `
 <div class="col d-flex gap-5 member-card align-center">
-    <img src="assets/${img}" alt="" width="150px">
+    <img src="assets/${img}" alt="" width="120px">
     <div class="card-body" id="description">
-        <h4>${name.toUpperCase()}</h4>
+        <h5>${name.toUpperCase()}</h5>
         <div>${role}</div>
         <div><a href="">${img}</a></div>
     </div>
 </div>`
   return markup
 }
-const markup = addMarkUp(teamMembers[0])
-memberListEl.innerHTML += markup
 
 
