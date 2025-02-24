@@ -40,36 +40,28 @@ const teamMembers = [
 //1️⃣Get element from html by id
 const memberListEl = document.getElementById("member_list")
 const formEl = document.querySelector("form")
-console.log(formEl);
 
+//2️⃣Function that loop in the array and add elements to the page
+renderTeamMembers(teamMembers, memberListEl)
 
-//2️⃣For loop to cycle in the array
-for (let i = 0; i < teamMembers.length; i++) {
-  const thisMember = teamMembers[i];
-  //function to add mark up
-  const markup = addMarkUp(thisMember)
+//3️⃣Event litsener to submit the form
+formEl.addEventListener('submit', (e) => {
+  e.preventDefault()
+  //get elements value to display later
+  const name = document.getElementById("user_name").value
+  const role = document.getElementById("user_role").value
+  const email = document.getElementById("user_mail").value
+  const img = document.getElementById("user_img").value
+  //create a new object with the semplified version of es6
+  const newMember = {
+    name,
+    role,
+    email,
+    img,
+  }
+  //function to add html elements
+  const markup = addMarkUp(newMember)
   memberListEl.innerHTML += markup
-}
-
-//Functions
-
-/**3️⃣
- * function used to add html element in page
- * @param {*member of the team} member 
- * @returns markup
- */
-function addMarkUp(member) {
-  const { name, role, email, img } = member
-  const markup = `
-<div class="col d-flex member-card align-center">
-    <img src="assets/${img}" alt="" width="120px">
-    <div class="card-body" id="description">
-        <h5>${name.toUpperCase()}</h5>
-        <div>${role}</div>
-        <div><a href="">${img}</a></div>
-    </div>
-</div>`
-  return markup
-}
+})
 
 
