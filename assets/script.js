@@ -58,7 +58,7 @@ for (let i = 0; i < teamMembers.length; i++) {
 function addMarkUp(member) {
   const { name, role, email, img } = member
   const markup = `
-<div class="col d-flex gap-5 member-card align-center">
+<div class="col d-flex member-card align-center">
     <img src="assets/${img}" alt="" width="120px">
     <div class="card-body" id="description">
         <h5>${name.toUpperCase()}</h5>
