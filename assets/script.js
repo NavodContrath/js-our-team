@@ -37,3 +37,5 @@ const teamMembers = [
   }
 ];
 console.log("hi");
+
+const memberListEl = document.getElementById("member_list")

@@ -10,7 +10,7 @@ Dato un array di oggetti rappresentante un team di un’azienda:
     - sizes and spacing
 - create a layout of the web page in html
     - add jumbotron
-    - add grill
+    - add grid
     - add cards
 - style the layout with css
 - add element in html via javascript
