@@ -39,3 +39,41 @@ const teamMembers = [
 console.log("hi");
 
 const memberListEl = document.getElementById("member_list")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//functions
+function addMarkUp(member) {
+  const { name, role, email, img } = member
+  const markup = `
+<div class="col d-flex gap-5 member-card align-center">
+    <img src="assets/${img}" alt="" width="150px">
+    <div class="card-body" id="description">
+        <h4>${name.toUpperCase()}</h4>
+        <div>${role}</div>
+        <div><a href="">${img}</a></div>
+    </div>
+</div>`
+  return markup
+}
+const markup = addMarkUp(teamMembers[0])
+memberListEl.innerHTML += markup
+
+
