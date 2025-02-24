@@ -18,3 +18,7 @@ Dato un array di oggetti rappresentante un team di un’azienda:
 📌Bonus
 1. Rendere l’esercizio responsive, mandando a capo le card
 2. Aggiungere un form di aggiunta membri che permetta di visualizzare il nuovo membro sulla pagina 
+
+✅Summary
+- add queries with bootstrap
+- add form to add new members

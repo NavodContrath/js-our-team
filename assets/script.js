@@ -39,6 +39,9 @@ const teamMembers = [
 
 //1️⃣Get element from html by id
 const memberListEl = document.getElementById("member_list")
+const formEl = document.querySelector("form")
+console.log(formEl);
+
 
 //2️⃣For loop to cycle in the array
 for (let i = 0; i < teamMembers.length; i++) {
