@@ -8,7 +8,7 @@ function addMarkUp(member) {
     const { name, role, email, img } = member
     const markup = `
   <div class="col d-flex member-card align-center">
-      <img src="assets/${img}" alt="" width="120px">
+      <img src="assets/${img}" alt="" width="100px">
       <div class="card-body" id="description">
           <h5>${name.toUpperCase()}</h5>
           <div>${role}</div>
@@ -19,7 +19,7 @@ function addMarkUp(member) {
 }
 
 /**
- * For loop to cycle in the array and add member in the array in page
+ * For loop to cycle in the array and add member of the array in page
  * @param {*teamMembers} array 
  * @param {*memberListEl} domEl 
  */
